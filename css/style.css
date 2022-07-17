@@ -41,7 +41,7 @@ input {
     margin: 15px;
 }
 
-.form-title {
+.form-title, a {
     color: #30507D;
     font-weight: 500;
     font-size: 20px;

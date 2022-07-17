@@ -6,7 +6,7 @@
 
     $mysql = new mysqli('localhost', 'root', 'root', 'manao');
     
-    $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'");
+    $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$pass'");
     $user = $result->fetch_assoc();
     if(count($user) == 0) {
         echo "Такой пользователь не найден";

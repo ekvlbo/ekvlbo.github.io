@@ -19,10 +19,10 @@
             <h1 class="form-title"> Авторизация</h1>
             <form action="validation-form/aut.php" method="POST" class="form-fields">
                 <div class="form-field">
-                    <input type="text" placeholder="Логин">
+                    <input type="text" placeholder="Логин" name="login">
                 </div>
                 <div class="form-field">
-                    <input type="password" placeholder="Пароль">
+                    <input type="password" placeholder="Пароль" name="pass">
                 </div>
                 <div class="form-button">
                     <button class="button" type="submit">Войти</button>

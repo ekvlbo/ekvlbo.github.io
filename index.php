@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="manao/css/style.css">
     <title>Веб приложение</title>
 </head>
 
@@ -17,7 +17,7 @@
         ?>
         <div class="container-section">
             <h1 class="form-title"> Регистрация</h1>
-            <form action="validation-form/check.php" method="POST">
+            <form action="manao/validation-form/check.php" method="POST">
                 <div class="form-field">
                     <input type="text" placeholder="Логин" name="login" id="login">
                 </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="container-section">
             <h1 class="form-title"> Авторизация</h1>
-            <form action="validation-form/aut.php" method="POST" class="form-fields">
+            <form action="manao/validation-form/aut.php" method="POST" class="form-fields">
                 <div class="form-field">
                     <input type="text" placeholder="Логин">
                 </div>

@@ -13,8 +13,7 @@
         exit();
     }
 
-    print_r($user);
-    exit();
+    setcookie('user', $user['name'], time() + 3600 * 24, "/");
     $mysql->close();
 
     header('Location: /');

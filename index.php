@@ -12,28 +12,25 @@
 
 <body>
     <div class="container">
-        <?php
-            if($_COOKIE['user'] == ''):
-        ?>
         <div class="container-section">
             <h1 class="form-title"> Авторизация</h1>
             <form action="validation-form/aut.php" method="POST" class="form-fields">
                 <div class="form-field">
-                    <input type="text" placeholder="Логин" name="login">
+                    <input type="text" id="login" placeholder="Логин" name="login">
                 </div>
                 <div class="form-field">
-                    <input type="password" placeholder="Пароль" name="pass">
+                    <input type="password" id="password" placeholder="Пароль" name="password">
                 </div>
                 <div class="form-button">
-                    <button class="button" type="submit">Войти</button>
+                    <button class="button" id="send" type="submit">Войти</button>
                 </div>
+                <p> У вас нет аккаунта? <a href="reg.php"> Зарегистрируйтесь!</a></p>
             </form>
+
         </div>
-        <?php else: ?>
-                <p>Hello, <?=$_COOKIE['user']?>. Чтобы выйти нажмите <a href="/exit.php">здесь</a>. </p>
-        
-        <?php endif;   ?>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/reg.js"></script>
 </body>
 
 </html>

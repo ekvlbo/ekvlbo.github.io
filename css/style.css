@@ -7,6 +7,15 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+a {
+    color: #385983;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p {
+    margin: 10px 0;
+}
 input {
     height: 45px;
     width: 100%;
@@ -41,7 +50,7 @@ input {
     margin: 15px;
 }
 
-.form-title, a {
+.form-title {
     color: #30507D;
     font-weight: 500;
     font-size: 20px;
@@ -71,4 +80,12 @@ input {
 
 .button:hover {
     background: #0d6cf2;
+}
+
+.msg {
+    border: 2px solid #ffa908;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
 }

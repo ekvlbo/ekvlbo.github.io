@@ -1,5 +1,9 @@
 <?php
     session_start();
+
+    if ($_COOKIE['user']) {
+        header('Location: ../profile.php');
+     }
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -36,17 +40,23 @@
                     </div>
 
                     <button class="button" id="send" type="submit">Регистрация</button>
-                   <p> У вас есть аккаунт? <a href="index.php"> Авторизируйтесь!</a></p>
-                   <p class="msg">
-                        <?= $_SESSION['message'] ?>
-                   </p>  
+                    <p> У вас есть аккаунт? <a href="index.php"> Авторизируйтесь!</a></p>
+                       <?php
+                       if ($_SESSION['message']) {
+                        echo '<p class="msg">'.$_SESSION['message'].'</p>';
+                       }
+                        unset($_SESSION['message']);
+                     ?>
+                     
+                    
+                   
                 </form>
                 
             </div>
             
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/reg.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

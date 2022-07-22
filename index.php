@@ -1,3 +1,10 @@
+<?php
+ session_start();
+
+ if ($_COOKIE['user']) {
+    header('Location: ../profile.php');
+ }
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 
@@ -14,23 +21,24 @@
     <div class="container">
         <div class="container-section">
             <h1 class="form-title"> Авторизация</h1>
-            <form action="validation-form/aut.php" method="POST" class="form-fields">
+            <form>
                 <div class="form-field">
-                    <input type="text" id="login" placeholder="Логин" name="login">
+                    <input type="text" id="login" name="login" placeholder="Логин">
                 </div>
                 <div class="form-field">
-                    <input type="password" id="password" placeholder="Пароль" name="password">
+                    <input type="password" id="password" name="password" placeholder="Пароль">
                 </div>
                 <div class="form-button">
                     <button class="button" id="send" type="submit">Войти</button>
                 </div>
                 <p> У вас нет аккаунта? <a href="reg.php"> Зарегистрируйтесь!</a></p>
+                <p class="msg none"> </p>
             </form>
 
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/reg.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

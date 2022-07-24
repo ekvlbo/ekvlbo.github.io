@@ -21,35 +21,16 @@
     <div class="container">
             <div class="container-section">
                 <h1 class="form-title"> Регистрация</h1>
-                <form action="vendor/check.php" method="POST">
-                    <div class="form-field">
-                        <input type="text" id="login" name="login" placeholder="Логин">
-                        
-                    </div>
-                    <div class="form-field">
-                        <input type="password" id="password" name="password" placeholder="Пароль">
-                    </div>
-                    <div class="form-field">
-                        <input type="password" id="confpass" name="confpass" placeholder="Подтвердите пароль">
-                    </div>
-                    <div class="form-field">
-                        <input type="email" id="email" name="email" placeholder="Email">
-                    </div>
-                    <div class="form-field">
-                        <input type="text" id="name" name="name" placeholder="Name">
-                    </div>
-
-                    <button class="button" id="send" type="submit">Регистрация</button>
+                <form>
+                        <input type="text" class="form-field error" id="login" name="login" placeholder="Логин">
+                        <input type="password"  class="form-field error" id="password" name="password" placeholder="Пароль">
+                        <input type="password" class="form-field error" id="confpass" name="confpass" placeholder="Подтвердите пароль">
+                        <input type="email" class="form-field error" id="email" name="email" placeholder="Email">
+                        <input type="text" class="form-field error" id="name" name="name" placeholder="Name">>                    
+                        <button class="reg-button" type="submit">Регистрация</button>
                     <p> У вас есть аккаунт? <a href="index.php"> Авторизируйтесь!</a></p>
-                       <?php
-                       if ($_SESSION['message']) {
-                        echo '<p class="msg">'.$_SESSION['message'].'</p>';
-                       }
-                        unset($_SESSION['message']);
-                     ?>
-                     
-                    
-                   
+                    <p class="msg none"></p>
+
                 </form>
                 
             </div>

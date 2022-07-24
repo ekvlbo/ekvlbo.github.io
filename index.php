@@ -1,9 +1,9 @@
 <?php
- session_start();
+session_start();
 
- if ($_COOKIE['user']) {
+if ($_COOKIE['user']) {
     header('Location: ../profile.php');
- }
+}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -22,14 +22,10 @@
         <div class="container-section">
             <h1 class="form-title"> Авторизация</h1>
             <form>
-                <div class="form-field">
-                    <input type="text" id="login" name="login" placeholder="Логин">
-                </div>
-                <div class="form-field">
-                    <input type="password" id="password" name="password" placeholder="Пароль">
-                </div>
+                <input type="text" class="form-field error" id="login" name="login" placeholder="Логин">
+                <input type="password" class="form-field error" id="password" name="password" placeholder="Пароль">
                 <div class="form-button">
-                    <button class="button" id="send" type="submit">Войти</button>
+                    <button type="submit" class="send-button">Войти</button>
                 </div>
                 <p> У вас нет аккаунта? <a href="reg.php"> Зарегистрируйтесь!</a></p>
                 <p class="msg none"> </p>

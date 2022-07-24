@@ -74,7 +74,8 @@ input {
     margin-bottom: 13px;
 }
 
-.button {
+.send-button, 
+.reg-button {
     font-weight: bold;
     font-size: 14px;
     width: 100%;
@@ -90,6 +91,10 @@ input {
 
 }
 
-.button:hover {
+.error {
+    border: 2px solid #ff4332;
+}
+.send-button:hover,
+.reg-button:hover {
     background: #0d6cf2;
 }

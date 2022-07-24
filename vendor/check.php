@@ -29,22 +29,22 @@ if (mysqli_num_rows($check_login) > 0 || mysqli_num_rows($check_email) > 0) {
 
 $error_fields = [];
 
-if (mb_strlen($login) != 6) {
+if (mb_strlen($login) != 6 || $login === '') {
     
-    $error_fields[0] = 'Недопустимая длина логина';
+    $error_fields[] = 'Недопустимая длина логина';
 
  }
  if ($password === '' || ($password == !preg_match('/[A-Za-zА-Яа-я]+/', $password) || $password == !preg_match('/[0-9]+/', $password))) {
-    $error_fields[1] = 'Пароль состоит не из 6 символов, наличие букв и цифр обязательно';
+    $error_fields[] = 'Пароль состоит не из 6 символов, наличие букв и цифр обязательно';
 }
 if ($confpass === '' || $confpass != $password) {
-    $error_fields[2] = 'Пароли не совпадают';
+    $error_fields[] = 'Пароли не совпадают';
 } 
 if ($email === '' || !filter_var($email, FILTER_SANITIZE_EMAIL)) {
-    $error_fields[3] = 'Проверьте правильность email';
+    $error_fields[] = 'Проверьте правильность email';
 }
 if (mb_strlen($name) != 2 || mb_strlen($name) != ctype_alpha($name)) {
-    $error_fields[4] = 'Поле должно состоять из двух символов, только буквы';
+    $error_fields[] = 'Поле должно состоять из двух символов, только буквы';
 }
 if (!empty($error_fields)) {
     

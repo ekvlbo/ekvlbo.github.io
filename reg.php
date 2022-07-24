@@ -26,7 +26,7 @@
                         <input type="password"  class="form-field error" id="password" name="password" placeholder="Пароль">
                         <input type="password" class="form-field error" id="confpass" name="confpass" placeholder="Подтвердите пароль">
                         <input type="email" class="form-field error" id="email" name="email" placeholder="Email">
-                        <input type="text" class="form-field error" id="name" name="name" placeholder="Name">>                    
+                        <input type="text" class="form-field error" id="name" name="name" placeholder="Name">                  
                         <button class="reg-button" type="submit">Регистрация</button>
                     <p> У вас есть аккаунт? <a href="index.php"> Авторизируйтесь!</a></p>
                     <p class="msg none"></p>
